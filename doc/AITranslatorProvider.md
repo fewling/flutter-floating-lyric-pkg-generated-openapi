@@ -9,6 +9,7 @@ import 'package:floating_lyric_api/api.dart';
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **isEnabled** | **bool** | Whether this provider is enabled. | 
+**imgUrl** | **String** | Optional URL to an image representing this provider (e.g., logo). | [optional] 
 **displayName** | **String** | Human-readable name for this provider. | 
 **translators** | [**List&lt;AITranslator&gt;**](AITranslator.md) | List of translators offered by this provider. | 
 

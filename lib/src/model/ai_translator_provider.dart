@@ -24,6 +24,8 @@ class AITranslatorProvider {
 
     required  this.isEnabled,
 
+     this.imgUrl,
+
     required  this.displayName,
 
     required  this.translators,
@@ -39,6 +41,19 @@ class AITranslatorProvider {
 
 
   final bool isEnabled;
+
+
+
+      /// Optional URL to an image representing this provider (e.g., logo).
+  @JsonKey(
+    
+    name: r'imgUrl',
+    required: false,
+    includeIfNull: false,
+  )
+
+
+  final String? imgUrl;
 
 
 
@@ -76,11 +91,13 @@ class AITranslatorProvider {
       equals(
         [
             isEnabled,
+            imgUrl,
             displayName,
             translators,
         ],
         [
             other.isEnabled,
+            other.imgUrl,
             other.displayName,
             other.translators,
         ]
@@ -91,6 +108,7 @@ class AITranslatorProvider {
     @override
     int get hashCode => runtimeType.hashCode ^ mapPropsToHashCode([
         isEnabled,
+        imgUrl,
         displayName,
         translators,
     ],);

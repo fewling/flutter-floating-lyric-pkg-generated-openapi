@@ -13,6 +13,12 @@ void main() {
       // TODO
     });
 
+    // Optional URL to an image representing this provider (e.g., logo).
+    // String imgUrl
+    test('to test the property `imgUrl`', () async {
+      // TODO
+    });
+
     // Human-readable name for this provider.
     // String displayName
     test('to test the property `displayName`', () async {

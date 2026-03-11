@@ -9,6 +9,8 @@ part of 'ai_translator_provider.dart';
 abstract class _$AITranslatorProviderCWProxy {
   AITranslatorProvider isEnabled(bool isEnabled);
 
+  AITranslatorProvider imgUrl(String? imgUrl);
+
   AITranslatorProvider displayName(String displayName);
 
   AITranslatorProvider translators(List<AITranslator> translators);
@@ -21,6 +23,7 @@ abstract class _$AITranslatorProviderCWProxy {
   /// ````
   AITranslatorProvider call({
     bool isEnabled,
+    String? imgUrl,
     String displayName,
     List<AITranslator> translators,
   });
@@ -35,6 +38,9 @@ class _$AITranslatorProviderCWProxyImpl
 
   @override
   AITranslatorProvider isEnabled(bool isEnabled) => this(isEnabled: isEnabled);
+
+  @override
+  AITranslatorProvider imgUrl(String? imgUrl) => this(imgUrl: imgUrl);
 
   @override
   AITranslatorProvider displayName(String displayName) =>
@@ -53,6 +59,7 @@ class _$AITranslatorProviderCWProxyImpl
   /// ````
   AITranslatorProvider call({
     Object? isEnabled = const $CopyWithPlaceholder(),
+    Object? imgUrl = const $CopyWithPlaceholder(),
     Object? displayName = const $CopyWithPlaceholder(),
     Object? translators = const $CopyWithPlaceholder(),
   }) {
@@ -61,6 +68,10 @@ class _$AITranslatorProviderCWProxyImpl
           ? _value.isEnabled
           // ignore: cast_nullable_to_non_nullable
           : isEnabled as bool,
+      imgUrl: imgUrl == const $CopyWithPlaceholder()
+          ? _value.imgUrl
+          // ignore: cast_nullable_to_non_nullable
+          : imgUrl as String?,
       displayName: displayName == const $CopyWithPlaceholder()
           ? _value.displayName
           // ignore: cast_nullable_to_non_nullable
@@ -93,6 +104,7 @@ AITranslatorProvider _$AITranslatorProviderFromJson(
   );
   final val = AITranslatorProvider(
     isEnabled: $checkedConvert('isEnabled', (v) => v as bool),
+    imgUrl: $checkedConvert('imgUrl', (v) => v as String?),
     displayName: $checkedConvert('displayName', (v) => v as String),
     translators: $checkedConvert(
       'translators',
@@ -108,6 +120,7 @@ Map<String, dynamic> _$AITranslatorProviderToJson(
   AITranslatorProvider instance,
 ) => <String, dynamic>{
   'isEnabled': instance.isEnabled,
+  'imgUrl': ?instance.imgUrl,
   'displayName': instance.displayName,
   'translators': instance.translators.map((e) => e.toJson()).toList(),
 };
