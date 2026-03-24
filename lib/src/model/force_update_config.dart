@@ -7,7 +7,7 @@ import 'package:copy_with_extension/copy_with_extension.dart';
 import 'package:json_annotation/json_annotation.dart';
 import 'package:equatable/src/equatable_utils.dart';
 
-part 'force_update_config_dto.g.dart';
+part 'force_update_config.g.dart';
 
 
 @CopyWith()
@@ -17,9 +17,9 @@ part 'force_update_config_dto.g.dart';
   disallowUnrecognizedKeys: false,
   explicitToJson: true,
 )
-class ForceUpdateConfigDTO {
-  /// Returns a new [ForceUpdateConfigDTO] instance.
-  ForceUpdateConfigDTO({
+class ForceUpdateConfig {
+  /// Returns a new [ForceUpdateConfig] instance.
+  ForceUpdateConfig({
 
     required  this.minimumVersionAndroid,
 
@@ -70,7 +70,7 @@ class ForceUpdateConfigDTO {
 
     bool operator ==(Object other) {
       return identical(this, other) ||
-      other is ForceUpdateConfigDTO &&
+      other is ForceUpdateConfig &&
       runtimeType == other.runtimeType &&
       equals(
         [
@@ -94,9 +94,9 @@ class ForceUpdateConfigDTO {
         changelog,
     ],);
 
-  factory ForceUpdateConfigDTO.fromJson(Map<String, dynamic> json) => _$ForceUpdateConfigDTOFromJson(json);
+  factory ForceUpdateConfig.fromJson(Map<String, dynamic> json) => _$ForceUpdateConfigFromJson(json);
 
-  Map<String, dynamic> toJson() => _$ForceUpdateConfigDTOToJson(this);
+  Map<String, dynamic> toJson() => _$ForceUpdateConfigToJson(this);
 
   @override
   String toString() {

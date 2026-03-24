@@ -64,7 +64,7 @@ Class | Method | HTTP request | Description
  - [AITranslator](doc/AITranslator.md)
  - [AITranslatorProvider](doc/AITranslatorProvider.md)
  - [FeatureFlag](doc/FeatureFlag.md)
- - [ForceUpdateConfigDTO](doc/ForceUpdateConfigDTO.md)
+ - [ForceUpdateConfig](doc/ForceUpdateConfig.md)
  - [TranslateRequestDTO](doc/TranslateRequestDTO.md)
  - [TranslateResponseDTO](doc/TranslateResponseDTO.md)
 

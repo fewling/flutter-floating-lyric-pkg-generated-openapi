@@ -1,12 +1,12 @@
 import 'package:test/test.dart';
 import 'package:floating_lyric_api/floating_lyric_api.dart';
 
-// tests for ForceUpdateConfigDTO
+// tests for ForceUpdateConfig
 void main() {
-  final ForceUpdateConfigDTO? instance = /* ForceUpdateConfigDTO(...) */ null;
+  final ForceUpdateConfig? instance = /* ForceUpdateConfig(...) */ null;
   // TODO add properties to the entity
 
-  group(ForceUpdateConfigDTO, () {
+  group(ForceUpdateConfig, () {
     // Minimum required version for Android devices
     // String minimumVersionAndroid
     test('to test the property `minimumVersionAndroid`', () async {

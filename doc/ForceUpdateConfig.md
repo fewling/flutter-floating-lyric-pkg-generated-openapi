@@ -1,4 +1,4 @@
-# floating_lyric_api.model.ForceUpdateConfigDTO
+# floating_lyric_api.model.ForceUpdateConfig
 
 ## Load the model package
 ```dart
