@@ -3,6 +3,7 @@ import 'package:floating_lyric_api/src/model/ai_logic_translation_response_dto.d
 import 'package:floating_lyric_api/src/model/ai_translator.dart';
 import 'package:floating_lyric_api/src/model/ai_translator_provider.dart';
 import 'package:floating_lyric_api/src/model/feature_flag.dart';
+import 'package:floating_lyric_api/src/model/force_update_config_dto.dart';
 import 'package:floating_lyric_api/src/model/translate_request_dto.dart';
 import 'package:floating_lyric_api/src/model/translate_response_dto.dart';
 
@@ -34,6 +35,8 @@ final _regMap = RegExp(r'^Map<String,(.*)>$');
           return AITranslatorProvider.fromJson(value as Map<String, dynamic>) as ReturnType;
         case 'FeatureFlag':
           return FeatureFlag.fromJson(value as Map<String, dynamic>) as ReturnType;
+        case 'ForceUpdateConfigDTO':
+          return ForceUpdateConfigDTO.fromJson(value as Map<String, dynamic>) as ReturnType;
         case 'TranslateRequestDTO':
           return TranslateRequestDTO.fromJson(value as Map<String, dynamic>) as ReturnType;
         case 'TranslateResponseDTO':
