@@ -3,6 +3,7 @@
 //
 
 // ignore_for_file: unused_element
+import 'package:floating_lyric_api/src/model/version_gate1.dart';
 import 'package:copy_with_extension/copy_with_extension.dart';
 import 'package:json_annotation/json_annotation.dart';
 import 'package:equatable/src/equatable_utils.dart';
@@ -32,6 +33,8 @@ class AITranslator {
     required  this.displayName,
 
      this.description = '',
+
+     this.versionGate,
   });
 
       /// General family or category of this translator (e.g., \"gpt\", \"gemini\").
@@ -114,6 +117,18 @@ class AITranslator {
 
 
 
+  @JsonKey(
+    
+    name: r'versionGate',
+    required: false,
+    includeIfNull: false,
+  )
+
+
+  final VersionGate1? versionGate;
+
+
+
 
     bool operator ==(Object other) {
       return identical(this, other) ||
@@ -127,6 +142,7 @@ class AITranslator {
             id,
             displayName,
             description,
+            versionGate,
         ],
         [
             other.family,
@@ -135,6 +151,7 @@ class AITranslator {
             other.id,
             other.displayName,
             other.description,
+            other.versionGate,
         ]
       );
     }
@@ -148,6 +165,7 @@ class AITranslator {
         id,
         displayName,
         description,
+        versionGate,
     ],);
 
   factory AITranslator.fromJson(Map<String, dynamic> json) => _$AITranslatorFromJson(json);

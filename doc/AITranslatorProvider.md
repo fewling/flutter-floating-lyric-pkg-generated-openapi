@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **imgUrl** | **String** | Optional URL to an image representing this provider (e.g., logo). | [optional] 
 **displayName** | **String** | Human-readable name for this provider. | 
 **translators** | [**List&lt;AITranslator&gt;**](AITranslator.md) | List of translators offered by this provider. | 
+**versionGate** | [**VersionGate2**](VersionGate2.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

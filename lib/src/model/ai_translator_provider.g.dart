@@ -15,6 +15,8 @@ abstract class _$AITranslatorProviderCWProxy {
 
   AITranslatorProvider translators(List<AITranslator> translators);
 
+  AITranslatorProvider versionGate(VersionGate2? versionGate);
+
   /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `AITranslatorProvider(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
   ///
   /// Usage
@@ -26,6 +28,7 @@ abstract class _$AITranslatorProviderCWProxy {
     String? imgUrl,
     String displayName,
     List<AITranslator> translators,
+    VersionGate2? versionGate,
   });
 }
 
@@ -51,6 +54,10 @@ class _$AITranslatorProviderCWProxyImpl
       this(translators: translators);
 
   @override
+  AITranslatorProvider versionGate(VersionGate2? versionGate) =>
+      this(versionGate: versionGate);
+
+  @override
   /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `AITranslatorProvider(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
   ///
   /// Usage
@@ -62,6 +69,7 @@ class _$AITranslatorProviderCWProxyImpl
     Object? imgUrl = const $CopyWithPlaceholder(),
     Object? displayName = const $CopyWithPlaceholder(),
     Object? translators = const $CopyWithPlaceholder(),
+    Object? versionGate = const $CopyWithPlaceholder(),
   }) {
     return AITranslatorProvider(
       isEnabled: isEnabled == const $CopyWithPlaceholder()
@@ -80,6 +88,10 @@ class _$AITranslatorProviderCWProxyImpl
           ? _value.translators
           // ignore: cast_nullable_to_non_nullable
           : translators as List<AITranslator>,
+      versionGate: versionGate == const $CopyWithPlaceholder()
+          ? _value.versionGate
+          // ignore: cast_nullable_to_non_nullable
+          : versionGate as VersionGate2?,
     );
   }
 }
@@ -112,6 +124,11 @@ AITranslatorProvider _$AITranslatorProviderFromJson(
           .map((e) => AITranslator.fromJson(e as Map<String, dynamic>))
           .toList(),
     ),
+    versionGate: $checkedConvert(
+      'versionGate',
+      (v) =>
+          v == null ? null : VersionGate2.fromJson(v as Map<String, dynamic>),
+    ),
   );
   return val;
 });
@@ -123,4 +140,5 @@ Map<String, dynamic> _$AITranslatorProviderToJson(
   'imgUrl': ?instance.imgUrl,
   'displayName': instance.displayName,
   'translators': instance.translators.map((e) => e.toJson()).toList(),
+  'versionGate': ?instance.versionGate?.toJson(),
 };

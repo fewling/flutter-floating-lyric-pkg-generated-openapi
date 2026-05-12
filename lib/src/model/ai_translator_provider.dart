@@ -3,6 +3,7 @@
 //
 
 // ignore_for_file: unused_element
+import 'package:floating_lyric_api/src/model/version_gate2.dart';
 import 'package:floating_lyric_api/src/model/ai_translator.dart';
 import 'package:copy_with_extension/copy_with_extension.dart';
 import 'package:json_annotation/json_annotation.dart';
@@ -29,6 +30,8 @@ class AITranslatorProvider {
     required  this.displayName,
 
     required  this.translators,
+
+     this.versionGate,
   });
 
       /// Whether this provider is enabled.
@@ -83,6 +86,18 @@ class AITranslatorProvider {
 
 
 
+  @JsonKey(
+    
+    name: r'versionGate',
+    required: false,
+    includeIfNull: false,
+  )
+
+
+  final VersionGate2? versionGate;
+
+
+
 
     bool operator ==(Object other) {
       return identical(this, other) ||
@@ -94,12 +109,14 @@ class AITranslatorProvider {
             imgUrl,
             displayName,
             translators,
+            versionGate,
         ],
         [
             other.isEnabled,
             other.imgUrl,
             other.displayName,
             other.translators,
+            other.versionGate,
         ]
       );
     }
@@ -111,6 +128,7 @@ class AITranslatorProvider {
         imgUrl,
         displayName,
         translators,
+        versionGate,
     ],);
 
   factory AITranslatorProvider.fromJson(Map<String, dynamic> json) => _$AITranslatorProviderFromJson(json);

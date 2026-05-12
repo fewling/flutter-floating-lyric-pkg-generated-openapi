@@ -18,4 +18,8 @@ export 'package:floating_lyric_api/src/model/feature_flag.dart';
 export 'package:floating_lyric_api/src/model/force_update_config.dart';
 export 'package:floating_lyric_api/src/model/translate_request_dto.dart';
 export 'package:floating_lyric_api/src/model/translate_response_dto.dart';
+export 'package:floating_lyric_api/src/model/version_gate.dart';
+export 'package:floating_lyric_api/src/model/version_gate1.dart';
+export 'package:floating_lyric_api/src/model/version_gate2.dart';
+export 'package:floating_lyric_api/src/model/version_gate3.dart';
 

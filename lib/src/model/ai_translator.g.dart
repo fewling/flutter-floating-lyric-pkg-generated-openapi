@@ -19,6 +19,8 @@ abstract class _$AITranslatorCWProxy {
 
   AITranslator description(String? description);
 
+  AITranslator versionGate(VersionGate1? versionGate);
+
   /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `AITranslator(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
   ///
   /// Usage
@@ -32,6 +34,7 @@ abstract class _$AITranslatorCWProxy {
     String id,
     String displayName,
     String? description,
+    VersionGate1? versionGate,
   });
 }
 
@@ -63,6 +66,10 @@ class _$AITranslatorCWProxyImpl implements _$AITranslatorCWProxy {
       this(description: description);
 
   @override
+  AITranslator versionGate(VersionGate1? versionGate) =>
+      this(versionGate: versionGate);
+
+  @override
   /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `AITranslator(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
   ///
   /// Usage
@@ -76,6 +83,7 @@ class _$AITranslatorCWProxyImpl implements _$AITranslatorCWProxy {
     Object? id = const $CopyWithPlaceholder(),
     Object? displayName = const $CopyWithPlaceholder(),
     Object? description = const $CopyWithPlaceholder(),
+    Object? versionGate = const $CopyWithPlaceholder(),
   }) {
     return AITranslator(
       family: family == const $CopyWithPlaceholder()
@@ -102,6 +110,10 @@ class _$AITranslatorCWProxyImpl implements _$AITranslatorCWProxy {
           ? _value.description
           // ignore: cast_nullable_to_non_nullable
           : description as String?,
+      versionGate: versionGate == const $CopyWithPlaceholder()
+          ? _value.versionGate
+          // ignore: cast_nullable_to_non_nullable
+          : versionGate as VersionGate1?,
     );
   }
 }
@@ -149,6 +161,12 @@ AITranslator _$AITranslatorFromJson(Map<String, dynamic> json) =>
         id: $checkedConvert('id', (v) => v as String),
         displayName: $checkedConvert('displayName', (v) => v as String),
         description: $checkedConvert('description', (v) => v as String? ?? ''),
+        versionGate: $checkedConvert(
+          'versionGate',
+          (v) => v == null
+              ? null
+              : VersionGate1.fromJson(v as Map<String, dynamic>),
+        ),
       );
       return val;
     });
@@ -161,6 +179,7 @@ Map<String, dynamic> _$AITranslatorToJson(AITranslator instance) =>
       'id': instance.id,
       'displayName': instance.displayName,
       'description': ?instance.description,
+      'versionGate': ?instance.versionGate?.toJson(),
     };
 
 const _$AITranslatorFamilyEnumEnumMap = {

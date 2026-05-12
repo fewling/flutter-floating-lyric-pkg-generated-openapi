@@ -6,6 +6,10 @@ import 'package:floating_lyric_api/src/model/feature_flag.dart';
 import 'package:floating_lyric_api/src/model/force_update_config.dart';
 import 'package:floating_lyric_api/src/model/translate_request_dto.dart';
 import 'package:floating_lyric_api/src/model/translate_response_dto.dart';
+import 'package:floating_lyric_api/src/model/version_gate.dart';
+import 'package:floating_lyric_api/src/model/version_gate1.dart';
+import 'package:floating_lyric_api/src/model/version_gate2.dart';
+import 'package:floating_lyric_api/src/model/version_gate3.dart';
 
 final _regList = RegExp(r'^List<(.*)>$');
 final _regSet = RegExp(r'^Set<(.*)>$');
@@ -41,6 +45,14 @@ final _regMap = RegExp(r'^Map<String,(.*)>$');
           return TranslateRequestDTO.fromJson(value as Map<String, dynamic>) as ReturnType;
         case 'TranslateResponseDTO':
           return TranslateResponseDTO.fromJson(value as Map<String, dynamic>) as ReturnType;
+        case 'VersionGate':
+          return VersionGate.fromJson(value as Map<String, dynamic>) as ReturnType;
+        case 'VersionGate1':
+          return VersionGate1.fromJson(value as Map<String, dynamic>) as ReturnType;
+        case 'VersionGate2':
+          return VersionGate2.fromJson(value as Map<String, dynamic>) as ReturnType;
+        case 'VersionGate3':
+          return VersionGate3.fromJson(value as Map<String, dynamic>) as ReturnType;
         default:
           RegExpMatch? match;
 

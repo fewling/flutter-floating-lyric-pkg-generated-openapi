@@ -3,6 +3,7 @@
 //
 
 // ignore_for_file: unused_element
+import 'package:floating_lyric_api/src/model/version_gate3.dart';
 import 'package:floating_lyric_api/src/model/ai_translator_provider.dart';
 import 'package:copy_with_extension/copy_with_extension.dart';
 import 'package:json_annotation/json_annotation.dart';
@@ -25,6 +26,8 @@ class FeatureFlag {
      this.isAiTranslatorEnabled = true,
 
     required  this.aiTranslatorProviders,
+
+     this.versionGate,
   });
 
       /// Whether the AI Translator feature is enabled.
@@ -53,6 +56,18 @@ class FeatureFlag {
 
 
 
+  @JsonKey(
+    
+    name: r'versionGate',
+    required: false,
+    includeIfNull: false,
+  )
+
+
+  final VersionGate3? versionGate;
+
+
+
 
     bool operator ==(Object other) {
       return identical(this, other) ||
@@ -62,10 +77,12 @@ class FeatureFlag {
         [
             isAiTranslatorEnabled,
             aiTranslatorProviders,
+            versionGate,
         ],
         [
             other.isAiTranslatorEnabled,
             other.aiTranslatorProviders,
+            other.versionGate,
         ]
       );
     }
@@ -75,6 +92,7 @@ class FeatureFlag {
     int get hashCode => runtimeType.hashCode ^ mapPropsToHashCode([
         isAiTranslatorEnabled,
         aiTranslatorProviders,
+        versionGate,
     ],);
 
   factory FeatureFlag.fromJson(Map<String, dynamic> json) => _$FeatureFlagFromJson(json);
