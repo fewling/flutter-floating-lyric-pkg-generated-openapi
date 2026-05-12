@@ -3,7 +3,7 @@
 //
 
 // ignore_for_file: unused_element
-import 'package:floating_lyric_api/src/model/version_gate3.dart';
+import 'package:floating_lyric_api/src/model/version_gate.dart';
 import 'package:floating_lyric_api/src/model/ai_translator_provider.dart';
 import 'package:copy_with_extension/copy_with_extension.dart';
 import 'package:json_annotation/json_annotation.dart';
@@ -64,7 +64,7 @@ class FeatureFlag {
   )
 
 
-  final VersionGate3? versionGate;
+  final VersionGate? versionGate;
 
 
 

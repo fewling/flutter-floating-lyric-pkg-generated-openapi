@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 **id** | **String** | For `gemini` (Firebase AI Logic), this is the templateID or templateName. For all other providers, this is the model name.  | 
 **displayName** | **String** | Human-readable name for this translator. | 
 **description** | **String** | Optional longer description of this translator. | [optional] [default to '']
-**versionGate** | [**VersionGate1**](VersionGate1.md) |  | [optional] 
+**versionGate** | [**VersionGate**](VersionGate.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

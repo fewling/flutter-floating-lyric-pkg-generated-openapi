@@ -43,7 +43,7 @@ void main() {
       // TODO
     });
 
-    // VersionGate1 versionGate
+    // VersionGate versionGate
     test('to test the property `versionGate`', () async {
       // TODO
     });

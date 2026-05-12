@@ -15,7 +15,7 @@ abstract class _$AITranslatorProviderCWProxy {
 
   AITranslatorProvider translators(List<AITranslator> translators);
 
-  AITranslatorProvider versionGate(VersionGate2? versionGate);
+  AITranslatorProvider versionGate(VersionGate? versionGate);
 
   /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `AITranslatorProvider(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
   ///
@@ -28,7 +28,7 @@ abstract class _$AITranslatorProviderCWProxy {
     String? imgUrl,
     String displayName,
     List<AITranslator> translators,
-    VersionGate2? versionGate,
+    VersionGate? versionGate,
   });
 }
 
@@ -54,7 +54,7 @@ class _$AITranslatorProviderCWProxyImpl
       this(translators: translators);
 
   @override
-  AITranslatorProvider versionGate(VersionGate2? versionGate) =>
+  AITranslatorProvider versionGate(VersionGate? versionGate) =>
       this(versionGate: versionGate);
 
   @override
@@ -91,7 +91,7 @@ class _$AITranslatorProviderCWProxyImpl
       versionGate: versionGate == const $CopyWithPlaceholder()
           ? _value.versionGate
           // ignore: cast_nullable_to_non_nullable
-          : versionGate as VersionGate2?,
+          : versionGate as VersionGate?,
     );
   }
 }
@@ -126,8 +126,7 @@ AITranslatorProvider _$AITranslatorProviderFromJson(
     ),
     versionGate: $checkedConvert(
       'versionGate',
-      (v) =>
-          v == null ? null : VersionGate2.fromJson(v as Map<String, dynamic>),
+      (v) => v == null ? null : VersionGate.fromJson(v as Map<String, dynamic>),
     ),
   );
   return val;

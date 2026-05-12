@@ -13,7 +13,7 @@ abstract class _$FeatureFlagCWProxy {
     List<AITranslatorProvider> aiTranslatorProviders,
   );
 
-  FeatureFlag versionGate(VersionGate3? versionGate);
+  FeatureFlag versionGate(VersionGate? versionGate);
 
   /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `FeatureFlag(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
   ///
@@ -24,7 +24,7 @@ abstract class _$FeatureFlagCWProxy {
   FeatureFlag call({
     bool isAiTranslatorEnabled,
     List<AITranslatorProvider> aiTranslatorProviders,
-    VersionGate3? versionGate,
+    VersionGate? versionGate,
   });
 }
 
@@ -44,7 +44,7 @@ class _$FeatureFlagCWProxyImpl implements _$FeatureFlagCWProxy {
   ) => this(aiTranslatorProviders: aiTranslatorProviders);
 
   @override
-  FeatureFlag versionGate(VersionGate3? versionGate) =>
+  FeatureFlag versionGate(VersionGate? versionGate) =>
       this(versionGate: versionGate);
 
   @override
@@ -73,7 +73,7 @@ class _$FeatureFlagCWProxyImpl implements _$FeatureFlagCWProxy {
       versionGate: versionGate == const $CopyWithPlaceholder()
           ? _value.versionGate
           // ignore: cast_nullable_to_non_nullable
-          : versionGate as VersionGate3?,
+          : versionGate as VersionGate?,
     );
   }
 }
@@ -108,8 +108,7 @@ FeatureFlag _$FeatureFlagFromJson(
     ),
     versionGate: $checkedConvert(
       'versionGate',
-      (v) =>
-          v == null ? null : VersionGate3.fromJson(v as Map<String, dynamic>),
+      (v) => v == null ? null : VersionGate.fromJson(v as Map<String, dynamic>),
     ),
   );
   return val;

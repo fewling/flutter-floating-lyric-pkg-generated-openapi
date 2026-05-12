@@ -68,9 +68,6 @@ Class | Method | HTTP request | Description
  - [TranslateRequestDTO](doc/TranslateRequestDTO.md)
  - [TranslateResponseDTO](doc/TranslateResponseDTO.md)
  - [VersionGate](doc/VersionGate.md)
- - [VersionGate1](doc/VersionGate1.md)
- - [VersionGate2](doc/VersionGate2.md)
- - [VersionGate3](doc/VersionGate3.md)
 
 
 ## Documentation For Authorization
