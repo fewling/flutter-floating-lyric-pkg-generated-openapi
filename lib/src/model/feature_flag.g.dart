@@ -9,6 +9,8 @@ part of 'feature_flag.dart';
 abstract class _$FeatureFlagCWProxy {
   FeatureFlag isAiTranslatorEnabled(bool isAiTranslatorEnabled);
 
+  FeatureFlag isLyricChoreographyEnabled(bool? isLyricChoreographyEnabled);
+
   FeatureFlag aiTranslatorProviders(
     List<AITranslatorProvider> aiTranslatorProviders,
   );
@@ -23,6 +25,7 @@ abstract class _$FeatureFlagCWProxy {
   /// ````
   FeatureFlag call({
     bool isAiTranslatorEnabled,
+    bool? isLyricChoreographyEnabled,
     List<AITranslatorProvider> aiTranslatorProviders,
     VersionGate? versionGate,
   });
@@ -37,6 +40,10 @@ class _$FeatureFlagCWProxyImpl implements _$FeatureFlagCWProxy {
   @override
   FeatureFlag isAiTranslatorEnabled(bool isAiTranslatorEnabled) =>
       this(isAiTranslatorEnabled: isAiTranslatorEnabled);
+
+  @override
+  FeatureFlag isLyricChoreographyEnabled(bool? isLyricChoreographyEnabled) =>
+      this(isLyricChoreographyEnabled: isLyricChoreographyEnabled);
 
   @override
   FeatureFlag aiTranslatorProviders(
@@ -56,6 +63,7 @@ class _$FeatureFlagCWProxyImpl implements _$FeatureFlagCWProxy {
   /// ````
   FeatureFlag call({
     Object? isAiTranslatorEnabled = const $CopyWithPlaceholder(),
+    Object? isLyricChoreographyEnabled = const $CopyWithPlaceholder(),
     Object? aiTranslatorProviders = const $CopyWithPlaceholder(),
     Object? versionGate = const $CopyWithPlaceholder(),
   }) {
@@ -65,6 +73,11 @@ class _$FeatureFlagCWProxyImpl implements _$FeatureFlagCWProxy {
           ? _value.isAiTranslatorEnabled
           // ignore: cast_nullable_to_non_nullable
           : isAiTranslatorEnabled as bool,
+      isLyricChoreographyEnabled:
+          isLyricChoreographyEnabled == const $CopyWithPlaceholder()
+          ? _value.isLyricChoreographyEnabled
+          // ignore: cast_nullable_to_non_nullable
+          : isLyricChoreographyEnabled as bool?,
       aiTranslatorProviders:
           aiTranslatorProviders == const $CopyWithPlaceholder()
           ? _value.aiTranslatorProviders
@@ -100,6 +113,10 @@ FeatureFlag _$FeatureFlagFromJson(
       'isAiTranslatorEnabled',
       (v) => v as bool? ?? true,
     ),
+    isLyricChoreographyEnabled: $checkedConvert(
+      'isLyricChoreographyEnabled',
+      (v) => v as bool?,
+    ),
     aiTranslatorProviders: $checkedConvert(
       'aiTranslatorProviders',
       (v) => (v as List<dynamic>)
@@ -117,6 +134,7 @@ FeatureFlag _$FeatureFlagFromJson(
 Map<String, dynamic> _$FeatureFlagToJson(FeatureFlag instance) =>
     <String, dynamic>{
       'isAiTranslatorEnabled': instance.isAiTranslatorEnabled,
+      'isLyricChoreographyEnabled': ?instance.isLyricChoreographyEnabled,
       'aiTranslatorProviders': instance.aiTranslatorProviders
           .map((e) => e.toJson())
           .toList(),

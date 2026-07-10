@@ -25,6 +25,8 @@ class FeatureFlag {
 
      this.isAiTranslatorEnabled = true,
 
+     this.isLyricChoreographyEnabled,
+
     required  this.aiTranslatorProviders,
 
      this.versionGate,
@@ -40,6 +42,19 @@ class FeatureFlag {
 
 
   final bool isAiTranslatorEnabled;
+
+
+
+      /// Whether the Lyric Choreography feature is enabled. Kill switch for both generation and rendering. Optional so older cached Remote Config payloads still parse.
+  @JsonKey(
+    
+    name: r'isLyricChoreographyEnabled',
+    required: false,
+    includeIfNull: false,
+  )
+
+
+  final bool? isLyricChoreographyEnabled;
 
 
 
@@ -76,11 +91,13 @@ class FeatureFlag {
       equals(
         [
             isAiTranslatorEnabled,
+            isLyricChoreographyEnabled,
             aiTranslatorProviders,
             versionGate,
         ],
         [
             other.isAiTranslatorEnabled,
+            other.isLyricChoreographyEnabled,
             other.aiTranslatorProviders,
             other.versionGate,
         ]
@@ -91,6 +108,7 @@ class FeatureFlag {
     @override
     int get hashCode => runtimeType.hashCode ^ mapPropsToHashCode([
         isAiTranslatorEnabled,
+        isLyricChoreographyEnabled,
         aiTranslatorProviders,
         versionGate,
     ],);

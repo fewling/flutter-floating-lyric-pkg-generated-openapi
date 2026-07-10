@@ -13,6 +13,12 @@ void main() {
       // TODO
     });
 
+    // Whether the Lyric Choreography feature is enabled. Kill switch for both generation and rendering. Optional so older cached Remote Config payloads still parse.
+    // bool isLyricChoreographyEnabled
+    test('to test the property `isLyricChoreographyEnabled`', () async {
+      // TODO
+    });
+
     // List of available AI translator providers.
     // List<AITranslatorProvider> aiTranslatorProviders
     test('to test the property `aiTranslatorProviders`', () async {

@@ -9,6 +9,7 @@ import 'package:floating_lyric_api/api.dart';
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **isAiTranslatorEnabled** | **bool** | Whether the AI Translator feature is enabled. | [default to true]
+**isLyricChoreographyEnabled** | **bool** | Whether the Lyric Choreography feature is enabled. Kill switch for both generation and rendering. Optional so older cached Remote Config payloads still parse. | [optional] 
 **aiTranslatorProviders** | [**List&lt;AITranslatorProvider&gt;**](AITranslatorProvider.md) | List of available AI translator providers. | 
 **versionGate** | [**VersionGate**](VersionGate.md) |  | [optional] 
 

@@ -2,6 +2,10 @@ import 'package:floating_lyric_api/src/model/ai_logic_translation_request_dto.da
 import 'package:floating_lyric_api/src/model/ai_logic_translation_response_dto.dart';
 import 'package:floating_lyric_api/src/model/ai_translator.dart';
 import 'package:floating_lyric_api/src/model/ai_translator_provider.dart';
+import 'package:floating_lyric_api/src/model/choreograph_lrc_line_dto.dart';
+import 'package:floating_lyric_api/src/model/choreograph_request_dto.dart';
+import 'package:floating_lyric_api/src/model/choreograph_response_dto.dart';
+import 'package:floating_lyric_api/src/model/choreograph_song_meta_dto.dart';
 import 'package:floating_lyric_api/src/model/feature_flag.dart';
 import 'package:floating_lyric_api/src/model/force_update_config.dart';
 import 'package:floating_lyric_api/src/model/translate_request_dto.dart';
@@ -34,6 +38,14 @@ final _regMap = RegExp(r'^Map<String,(.*)>$');
           return AITranslator.fromJson(value as Map<String, dynamic>) as ReturnType;
         case 'AITranslatorProvider':
           return AITranslatorProvider.fromJson(value as Map<String, dynamic>) as ReturnType;
+        case 'ChoreographLrcLineDTO':
+          return ChoreographLrcLineDTO.fromJson(value as Map<String, dynamic>) as ReturnType;
+        case 'ChoreographRequestDTO':
+          return ChoreographRequestDTO.fromJson(value as Map<String, dynamic>) as ReturnType;
+        case 'ChoreographResponseDTO':
+          return ChoreographResponseDTO.fromJson(value as Map<String, dynamic>) as ReturnType;
+        case 'ChoreographSongMetaDTO':
+          return ChoreographSongMetaDTO.fromJson(value as Map<String, dynamic>) as ReturnType;
         case 'FeatureFlag':
           return FeatureFlag.fromJson(value as Map<String, dynamic>) as ReturnType;
         case 'ForceUpdateConfig':
