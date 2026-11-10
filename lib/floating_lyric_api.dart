@@ -22,5 +22,10 @@ export 'package:floating_lyric_api/src/model/feature_flag.dart';
 export 'package:floating_lyric_api/src/model/force_update_config.dart';
 export 'package:floating_lyric_api/src/model/translate_request_dto.dart';
 export 'package:floating_lyric_api/src/model/translate_response_dto.dart';
+export 'package:floating_lyric_api/src/model/translate_untimed_request_dto.dart';
+export 'package:floating_lyric_api/src/model/untimed_translated_section_dto.dart';
+export 'package:floating_lyric_api/src/model/untimed_translation_request_dto.dart';
+export 'package:floating_lyric_api/src/model/untimed_translation_response_dto.dart';
+export 'package:floating_lyric_api/src/model/untimed_translation_section_dto.dart';
 export 'package:floating_lyric_api/src/model/version_gate.dart';
 
