@@ -8,7 +8,9 @@ Properties match source `.github/workflows/openapi-codegen.yml`:
 
 Generated from source `index.yaml`; SDK constraint set to `>=3.8.0 <4.0.0`
 per workflow, then `dart pub get` and
-`dart run build_runner build --delete-conflicting-outputs` using Dart 3.13.7.
+`dart run build_runner build --delete-conflicting-outputs` using the workflow-pinned Flutter 3.38.6 / Dart 3.10.7.
+Explicit Dart binary: `/Users/felixwong/fvm/versions/3.38.6/bin/dart`.
+Initial host Dart 3.13.7 generation was superseded by pinned regeneration.
 Package version incremented from 0.0.8+8 to 0.0.9+9 per workflow semantics.
 Only generated lib, docs, README and new model test scaffolds were copied;
 existing dependency lock and package settings retained. Generated DTO source
