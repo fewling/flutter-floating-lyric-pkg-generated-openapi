@@ -15,6 +15,8 @@ abstract class _$AITranslatorCWProxy {
 
   AITranslator id(String id);
 
+  AITranslator untimedTranslationId(String? untimedTranslationId);
+
   AITranslator displayName(String displayName);
 
   AITranslator description(String? description);
@@ -32,6 +34,7 @@ abstract class _$AITranslatorCWProxy {
     bool isEnabled,
     AITranslatorProviderEnum provider,
     String id,
+    String? untimedTranslationId,
     String displayName,
     String? description,
     VersionGate? versionGate,
@@ -58,6 +61,10 @@ class _$AITranslatorCWProxyImpl implements _$AITranslatorCWProxy {
   AITranslator id(String id) => this(id: id);
 
   @override
+  AITranslator untimedTranslationId(String? untimedTranslationId) =>
+      this(untimedTranslationId: untimedTranslationId);
+
+  @override
   AITranslator displayName(String displayName) =>
       this(displayName: displayName);
 
@@ -81,6 +88,7 @@ class _$AITranslatorCWProxyImpl implements _$AITranslatorCWProxy {
     Object? isEnabled = const $CopyWithPlaceholder(),
     Object? provider = const $CopyWithPlaceholder(),
     Object? id = const $CopyWithPlaceholder(),
+    Object? untimedTranslationId = const $CopyWithPlaceholder(),
     Object? displayName = const $CopyWithPlaceholder(),
     Object? description = const $CopyWithPlaceholder(),
     Object? versionGate = const $CopyWithPlaceholder(),
@@ -102,6 +110,10 @@ class _$AITranslatorCWProxyImpl implements _$AITranslatorCWProxy {
           ? _value.id
           // ignore: cast_nullable_to_non_nullable
           : id as String,
+      untimedTranslationId: untimedTranslationId == const $CopyWithPlaceholder()
+          ? _value.untimedTranslationId
+          // ignore: cast_nullable_to_non_nullable
+          : untimedTranslationId as String?,
       displayName: displayName == const $CopyWithPlaceholder()
           ? _value.displayName
           // ignore: cast_nullable_to_non_nullable
@@ -159,6 +171,10 @@ AITranslator _$AITranslatorFromJson(Map<String, dynamic> json) =>
           ),
         ),
         id: $checkedConvert('id', (v) => v as String),
+        untimedTranslationId: $checkedConvert(
+          'untimedTranslationId',
+          (v) => v as String?,
+        ),
         displayName: $checkedConvert('displayName', (v) => v as String),
         description: $checkedConvert('description', (v) => v as String? ?? ''),
         versionGate: $checkedConvert(
@@ -177,6 +193,7 @@ Map<String, dynamic> _$AITranslatorToJson(AITranslator instance) =>
       'isEnabled': instance.isEnabled,
       'provider': _$AITranslatorProviderEnumEnumMap[instance.provider]!,
       'id': instance.id,
+      'untimedTranslationId': ?instance.untimedTranslationId,
       'displayName': instance.displayName,
       'description': ?instance.description,
       'versionGate': ?instance.versionGate?.toJson(),

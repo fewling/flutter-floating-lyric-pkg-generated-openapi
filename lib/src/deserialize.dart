@@ -10,6 +10,11 @@ import 'package:floating_lyric_api/src/model/feature_flag.dart';
 import 'package:floating_lyric_api/src/model/force_update_config.dart';
 import 'package:floating_lyric_api/src/model/translate_request_dto.dart';
 import 'package:floating_lyric_api/src/model/translate_response_dto.dart';
+import 'package:floating_lyric_api/src/model/translate_untimed_request_dto.dart';
+import 'package:floating_lyric_api/src/model/untimed_translated_section_dto.dart';
+import 'package:floating_lyric_api/src/model/untimed_translation_request_dto.dart';
+import 'package:floating_lyric_api/src/model/untimed_translation_response_dto.dart';
+import 'package:floating_lyric_api/src/model/untimed_translation_section_dto.dart';
 import 'package:floating_lyric_api/src/model/version_gate.dart';
 
 final _regList = RegExp(r'^List<(.*)>$');
@@ -54,6 +59,16 @@ final _regMap = RegExp(r'^Map<String,(.*)>$');
           return TranslateRequestDTO.fromJson(value as Map<String, dynamic>) as ReturnType;
         case 'TranslateResponseDTO':
           return TranslateResponseDTO.fromJson(value as Map<String, dynamic>) as ReturnType;
+        case 'TranslateUntimedRequestDTO':
+          return TranslateUntimedRequestDTO.fromJson(value as Map<String, dynamic>) as ReturnType;
+        case 'UntimedTranslatedSectionDTO':
+          return UntimedTranslatedSectionDTO.fromJson(value as Map<String, dynamic>) as ReturnType;
+        case 'UntimedTranslationRequestDTO':
+          return UntimedTranslationRequestDTO.fromJson(value as Map<String, dynamic>) as ReturnType;
+        case 'UntimedTranslationResponseDTO':
+          return UntimedTranslationResponseDTO.fromJson(value as Map<String, dynamic>) as ReturnType;
+        case 'UntimedTranslationSectionDTO':
+          return UntimedTranslationSectionDTO.fromJson(value as Map<String, dynamic>) as ReturnType;
         case 'VersionGate':
           return VersionGate.fromJson(value as Map<String, dynamic>) as ReturnType;
         default:

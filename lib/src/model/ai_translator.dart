@@ -30,6 +30,8 @@ class AITranslator {
 
     required  this.id,
 
+     this.untimedTranslationId,
+
     required  this.displayName,
 
      this.description = '',
@@ -91,6 +93,19 @@ class AITranslator {
 
 
 
+      /// Explicit opt-in to the section-ID untimed translation contract. Absent or blank means unsupported; never infer support from id or family. For ai_logic, selects a separately deployed untimed template. For cloud_function, selects a supported model on translateUntimed. The timed id is unchanged. This field does not bypass provider/translator enablement, version gates, authentication, verification, availability or quota checks. 
+  @JsonKey(
+    
+    name: r'untimedTranslationId',
+    required: false,
+    includeIfNull: false,
+  )
+
+
+  final String? untimedTranslationId;
+
+
+
       /// Human-readable name for this translator.
   @JsonKey(
     
@@ -140,6 +155,7 @@ class AITranslator {
             isEnabled,
             provider,
             id,
+            untimedTranslationId,
             displayName,
             description,
             versionGate,
@@ -149,6 +165,7 @@ class AITranslator {
             other.isEnabled,
             other.provider,
             other.id,
+            other.untimedTranslationId,
             other.displayName,
             other.description,
             other.versionGate,
@@ -163,6 +180,7 @@ class AITranslator {
         isEnabled,
         provider,
         id,
+        untimedTranslationId,
         displayName,
         description,
         versionGate,

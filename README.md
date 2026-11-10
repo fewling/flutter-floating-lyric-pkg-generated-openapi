@@ -71,6 +71,11 @@ Class | Method | HTTP request | Description
  - [ForceUpdateConfig](doc/ForceUpdateConfig.md)
  - [TranslateRequestDTO](doc/TranslateRequestDTO.md)
  - [TranslateResponseDTO](doc/TranslateResponseDTO.md)
+ - [TranslateUntimedRequestDTO](doc/TranslateUntimedRequestDTO.md)
+ - [UntimedTranslatedSectionDTO](doc/UntimedTranslatedSectionDTO.md)
+ - [UntimedTranslationRequestDTO](doc/UntimedTranslationRequestDTO.md)
+ - [UntimedTranslationResponseDTO](doc/UntimedTranslationResponseDTO.md)
+ - [UntimedTranslationSectionDTO](doc/UntimedTranslationSectionDTO.md)
  - [VersionGate](doc/VersionGate.md)
 
 
